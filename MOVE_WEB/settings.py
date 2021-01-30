@@ -93,15 +93,15 @@ WSGI_APPLICATION = 'MOVE_WEB.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME':'',
-        'USER':'',
-        'PASSWORD':'',
+        'NAME':'Live_1',
+        'USER':'xavion',
+        'PASSWORD':config('DB_PASS'),
         'PORT':'5432',
-        'HOST':'', 
+        'HOST':'database-2.cts8pxp9e6te.us-east-2.rds.amazonaws.com', 
     }
 }
 '''
-'''
+
 #for loacal host test
 DATABASES = {
     'default':{
@@ -109,7 +109,7 @@ DATABASES = {
         'NAME':os.path.join(BASE_DIR,'db.sqlite3'),
     }
 }
-'''
+
 if os.getcwd() == '/app':
     import dj_database_url
     db_from_env = dj_database_url.config(conn_max_age=600)
