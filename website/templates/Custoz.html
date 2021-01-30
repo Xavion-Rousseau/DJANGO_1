@@ -1,0 +1,17 @@
+<div class="container"><h1>Customers:</h1></div>
+
+<ul>
+{% for people in all %}
+    <li>{{ people.name }}</li>
+    <li>{{ people.email }}</li>
+    <li>{{ people.number }}</li>
+    <li>{{ people.type_work }}</li>
+    <li>{{ people.type_truck }}</li>
+    <li>{{ people.message }}</li>
+{% endfor %}
+
+
+
+
+
+</ul>

@@ -1,0 +1,36 @@
+@media (max-width: 765px) {
+    .welcome-area {
+      margin-top: 90px;
+    }
+}
+
+
+.EB{
+    background:    #ffffff;
+border:        1px solid #556699;
+border-radius: 6px;
+
+color:         #ffffff;
+
+
+text-align:    center;
+}
+.get-esti{
+    color: #556699;
+}
+.EB:hover {
+    background-color:#d7c2ff ;
+}
+.city{
+    
+    border-color: rgb(185, 185, 185);
+    border-radius: .5vh;
+
+}
+.esti{
+    color:#000000 ;
+    
+}
+.purple{
+   color: #556699;
+}

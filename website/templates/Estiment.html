@@ -1,0 +1,341 @@
+
+{% load static %}
+
+{% block contant %}
+
+<!DOCTYPE html>
+<head><link rel="icon" href="{% static 'website/images/favicon.png' %}"><link rel="stylesheet" type="text/css" href="{% static 'website/css/bootstrap.min.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'website/css/font-awesome.css' %}">
+
+    <link rel="stylesheet" href="{% static 'website/css/templatemo-softy-pinko.css' %}">
+    <link rel="stylesheet" href="{% static 'website/css/mycss.css' %}">
+    <link rel="stylesheet" href="{% static 'website/css/my_css.css' %}">
+    <link rel="stylesheet" href="{% static 'website/js/MyJs.js' %}">
+</head>
+<header><!-- Just an image -->
+   <!-- As a link -->
+<nav style="" class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{%url 'home'%}"><i><img style="margin-top: 10%;" src="{% static 'website/images/logo9.png' %}" alt=""></i></a>
+    </div>
+  </nav>
+  
+  
+</header>
+<body>
+    
+<section id="recet">
+    {% if no %}
+    <div class="alert alert-warning" role="alert">
+        <h1>Unfortently that your out of are range. Sorry for the inconvenient.</h1>
+      </div>
+
+{% elif pickup_location %}
+<div class="" style="margin:auto;margin-top: 3vh;">
+    <div class="">
+        <div style="margin: auto;" class="container">                <div class="alert alert-success" role="alert">
+            <div class="container">
+            <h4 class="alert-heading">Review Price Estiment {{Name}}</h4>
+            <br>
+            <p><b> Service: </b>  {{service}}</p>
+            <br>
+            <p><b> Truck:</b>    {{truck}} {{miles}}</p>
+            
+            <br>
+            
+            <p><b> Crew: </b>  {{crew}} + {{Labour}}</p>
+            <br>
+            <p><b>Pickup Location:</b>   {{pickup_location}}</p>
+            <br>
+            <p><b>Dropoff Location:</b>    {{dropoff_location}}</p>
+            <br>
+            
+<h4>Total:  ${{total}} + {{Labour}} </h4>    </div>               <hr><div class="container">
+            <p class="mb-0">Fill out forms below to book. </p></div>
+          </div>
+
+        </div>
+
+    </div>
+
+
+</section>
+<form method="POST" action="{%url 'home'%}">
+    {% csrf_token %} 
+</div>
+<section id='book'>
+<div style="margin: auto;" class="container row">
+    
+<div class="col-lg-12 col-md-6 input-group mb-3">
+<span class="input-group-text" id="basic-addon1"><i><img src="{% static 'website/images/phone-call.png' %}" alt=""></i></span>
+<input required name="phone_number" type="text" class="form-control" placeholder="Phone-number" aria-label="Username" aria-describedby="basic-addon1">
+</div>
+
+<div class="col-lg-6 col-md-6 input-group mb-3">
+<input required name="date" type="date" class="form-control" placeholder="what time" aria-label="Recipient's username" aria-describedby="basic-addon2">
+<span class="input-group-text" id="basic-addon2">When</span>
+</div>
+<div class="col-lg-6 col-md-6 input-group mb-3">
+<input required name="time" type="time" class="form-control" placeholder="Time" aria-label="pickup-time" aria-describedby="basic-addon2">
+<span class="input-group-text" id="basic-addon2">Pickup-Timw</span>
+</div>
+<div class="col-lg-4 col-md-6 input-group mb-3">
+    <input value="{{service}}" readonly  name="book_service" type="text" class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2">
+    <span class="input-group-text" id="basic-addon2">service</span>
+    </div>
+    <div class="col-lg-4 col-md-6 input-group mb-3">
+        <input value="{{truck}}" readonly  name="book_truck" type="text" class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2">
+        <span class="input-group-text" id="basic-addon2">truck</span>
+        </div>
+        <div class="col-lg-4 col-md-6 input-group mb-3">
+            <input value="{{crew}}" readonly   name="book_crew" type="text" class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <span class="input-group-text" id="basic-addon2">Crew</span>
+            </div>
+<div class="col-lg-12 input-group">
+<span class="input-group-text">Extra details</span>
+<input required name="details" placeholder="optional" class="form-control" aria-label="With textarea"></textarea>
+</div>
+<div class="container" style="margin-top: 4vh;">
+    <div class="col-lg-12 ">
+    </div>
+<button type="submit" style="background:    #8261ee;
+border-radius: 3px;
+color:         #ffffff;
+box-shadow: #8261ee;
+border-color:#ffffff;
+color: white;
+width: 100%;
+text-align:    center;"><p style="padding: 2vh;">BOOK</p></button>
+
+</div>
+
+
+</div>
+</div>
+</form>
+</section>
+
+    {% else %}
+<section id="services">
+<div class="titl"style="margin: auto;"><h1 style="text-align: center;margin: 10vh;" class="selectc">Pick service needed</h1></div>
+    <div class=" ">
+        <form method="POST" action="{%url 'Estiment'%}" id="Formm">
+            {% csrf_token %} 
+
+        <div class="box-image container row Service checkbox-group required">
+        
+                <li><div class="imagebox"><div class="rap"><input required value="Donation" name="Donation_Estiment" value="Donation_Estiment" id="donationcheckbox" type="checkbox" src=""><label for="donationcheckbox"><img src="{% static 'website/images/donation4.png'%}
+                    " alt=""></label><p class="pgi">Donation</p></div></div></li>
+                <li><div class="imagebox"><div class="rap"><input required value="Home Move"  name="Home_Move_Estiment" id="warehousecheckbox" type="checkbox" src=""><label for="warehousecheckbox"><img src="{% static 'website/images/home34.png'%}
+                    " alt=""></label><p class="pgi">Home Move</p></div></div></li>
+                <li><div class="imagebox"><div class="rap"><input required value="Storage Move" name="Storage_Estiment" id="homecheckbox" type="checkbox" value="Storage" src=""><label for="homecheckbox"><img src="{% static 'website/images/warehouse.png'%}
+                    " alt=""></label><p class="pgi">Storage</p></div></div></li>
+                <li><div class="imagebox"><div class="rap"><input required value="Junk Removal" name="Junk_Estiment" id="brokencheckbox" type="checkbox" src=""><label for="brokencheckbox"><img src="{% static 'website/images/broken.png'%}
+                    " alt=""></label><p class="pgi">Junk Removal</p></div></div></li>
+                <li><div class="imagebox"><div class="rap"><input required value="Need Somthing picked up" name="Pickups_Estiment" id="storecheckbox" type="checkbox" src=""><label for="storecheckbox"><img src="{% static 'website/images/price-tags1.png'%}
+                    " alt=""></label><p class="pgi">Store Pickups</p></div></div></li>
+                <li><div class="imagebox"><div class="rap"><input required value="Sold/Selling " name="Craiglist_Estiment" id="craiglistcheckbox" type="checkbox" src=""><label for="craiglistcheckbox"><img src="{% static 'website/images/handshake.png'%}" alt=""></label><p class="pgi">Craiglist deal</p></div></div>
+
+                
+            
+        </div>
+        
+    </section>   
+            
+    
+        
+    
+<section id="TRUCK">
+
+    </div>
+    <div class="titl" style="margin: auto;"><h1 style="margin: 10vh;text-align: center;" class="selectc">What Kind of Truck? -- click picture</h1></div>
+    <div class="TRUCKS"><div class="box-image container row ">
+        <div class="imagebox"><div class="rap"><input required value="Pickup/Suv" class="imgheight" name="pickup" id="pickupcheck" type="checkbox" src=""><label for="pickupcheck"><img src="{% static 'website/images/pickup.png'%}" alt=""></label><p class="pgi"><b>Pickup-truck</b></p><br><li class="pgi">$24.99</li><br><p class="pgi">$.99/miles</p><br><p style="font-size:2.1vh;">Small Loads/Single Item</p></div></div>
+        <div class="imagebox"><div class="rap"><input required value="10ft Uhaul" class="imgheight" name="ten_truck" id="tcheck" type="checkbox" src=""><label for="tcheck"><img class="imgheight" src="{% static 'website/images/truck100.png'%}
+            " alt=""></label><p class="pgi">10ft Uhaul truck</p><br><li class="pgi">$39.99</li><br><p class="pgi">$2.99/miles</p><br><p style="font-size:2.1vh;">One Bedroom Apt</p></div></div>
+        <div class="imagebox"><div class="rap"><input required value="15ft Uhaul" class="imgheight" name="fifteen_truck" id="fc" type="checkbox" src=""><label for="fc"><img class="imgheight" src="{% static 'website/images/truck155.png'%}
+            " alt=""></label><p class="pgi"><b> 15ft Uhaul truck</b></p><br><li class="pgi">$49.99</li><br><p class="pgi">$2.99/miles</p><br><p style="font-size:2.1vh;">One Bedroom Home</p></div></div>
+        <div class="imagebox"><div class="rap"><input required value="17ft Uhaul" class="imgheight" name="seventeen_truck" id="sc" type="checkbox" src=""><label for="sc"><img class="imgheight" src="{% static 'website/images/truck17.png'%}
+            " alt=""></label><p class="pgi"><b> 17ft Uhaul truck</b></p><br><li class="pgi">$149.99</li><br><p class="pgi">$3.99/miles</p><br><p style="font-size:2.1vh;">Two Bedroom Home</p></div></div>
+        <div class="imagebox"><div class="rap"><input required value="20ft Uahul" class="imgheight" name="twenty_truck" id="tc" type="checkbox" src=""><label for="tc"><img class="imgheight" src="{% static 'website/images/truck20.png'%}
+            " alt=""></label><p class="pgi"><b> 20ft Uhaul truck</b></p><br><li class="pgi">$249.99</li><br><p class="pgi">$4.99/miles</p><br><p style="font-size:2.1vh;">Three Bedroom home</p></div></div>
+            <div class="imagebox"><div class="rap"><input required value="26ft Uhaul"  class="imgheight" name="twenty_six_truck" id="tsc" type="checkbox" src=""><label for="tsc"><img class="imgheight" src="{% static 'website/images/truck26.png'%}
+                " alt=""></label><p class="pgi"><b> 26ft Uhaul truck</b></p><br><li class="pgi">$449.99</li><br><p class="pgi">$4.99/miles</p><br><p style="font-size:2.1vh;">Four Bedroom home</p></div></div>
+        
+
+        
+    
+</div></div></section>
+<section id="crew">
+<div class="titl" style="margin: auto;"><h1 style="text-align: center;margin: 10vh;" class="selectc">Crew</h1></div>
+<div><div class="box-image container row people">
+    
+    <div class="imagebox"><div class="rap"><input required value="One person help" name="one_people" id="one_people" type="checkbox" src=""><label for="one_people"><img src="{% static 'website/images/oneperson.png'%}
+        " alt=""></label><p class="pgi">One Helper</p></div></div>
+    <div class="imagebox"><div class="rap"><input required value="Two Helpers" name="two_people" id="two_people" type="checkbox" src=""><label for="two_people"><img src="{% static 'website/images/twoperson.png'%}
+        " alt=""></label><p class="pgi">Two Helpers</p></div></div>
+        
+        
+    
+
+</div></div></section>
+
+<section id="locations">
+
+
+<div class=" titl" style="margin: auto;"><h1 style="text-align: center;margin: 10vh;"  class="selectc">Loactions</h1></div>
+<div><div class=" row">
+    <div class="col-lg-6">
+    <div class="col-lg-12"><input required name="pickup_location" id="look" style="margin-bottom: 5vh; margin-top: 9vh;" class="form-control form-control-lg" type="text" placeholder="Pickup-Location" aria-label=".form-control-lg example"></div>
+    <div class="col-lg-12"><input name="dropoff_location" required id="looks" style=""  class=" form-control form-control-lg" type="text" placeholder="Dropoff-Location" aria-label=".form-control-lg example"></div>
+    
+</div>
+    <div class="col-lg-6"><label for="pi"><h1></h1></label><img style="margin: 1vh;width: 90vh;" id="pic" src="{% static 'website/images/USAA.png'%}" alt=""></div>
+    
+
+</div></div></section>
+
+<div id="myDiv"><button type="submit" class="next">Next</button></div>
+</form>
+</section>
+<script>
+
+</script>
+<script src="{% static 'website/js/custom.js' %}"></script>
+<script>
+    function activate(){
+    var input = document.getElementById('look');
+    var inpot = document.getElementById('looks');
+    var autocomplete = new google.maps.places.Autocomplete(input);
+    var auuto = new google.maps.places.Autocomplete(inpot);
+    }
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$("#donationcheckbox").click(function() {
+    $('html,body').animate({
+        scrollTop: $("#TRUCK").offset().top},
+        'slow');
+});
+$("#warehousecheckbox").click(function() {
+    $('html,body').animate({
+        scrollTop: $("#TRUCK").offset().top},
+        'slow');
+});
+$("#homecheckbox").click(function() {
+    $('html,body').animate({
+        scrollTop: $("#TRUCK").offset().top},
+        'slow');
+});
+$("#storecheckbox").click(function() {
+    $('html,body').animate({
+        scrollTop: $("#TRUCK").offset().top},
+        'slow');
+});
+$("#craiglistcheckbox").click(function() {
+    $('html,body').animate({
+        scrollTop: $("#TRUCK").offset().top},
+        'slow');
+});
+$("#pickupcheck").click(function() {
+    $('html,body').animate({
+        scrollTop: $("#crew").offset().top},
+        'slow');
+});
+$("#brokencheckbox").click(function() {
+    $('html,body').animate({
+        scrollTop: $("#TRUCK").offset().top},
+        'slow');
+});
+$("#fc").click(function() {
+    $('html,body').animate({
+        scrollTop: $("#crew").offset().top},
+        'slow');
+});
+$("#sc").click(function() {
+    $('html,body').animate({
+        scrollTop: $("#crew").offset().top},
+        'slow');
+});
+$("#ts").click(function() {
+    $('html,body').animate({
+        scrollTop: $("#crew").offset().top},
+        'slow');
+});
+$("#tsc").click(function() {
+    $('html,body').animate({
+        scrollTop: $("#crew").offset().top},
+        'slow');
+});
+$("#two_people").click(function() {
+    $('html,body').animate({
+        scrollTop: $("#locations").offset().top},
+        'slow');
+});
+$("#one_people").click(function() {
+    $('html,body').animate({
+        scrollTop: $("#locations").offset().top},
+        'slow');
+});
+$("#tcheck").click(function() {
+    $('html,body').animate({
+        scrollTop: $("#crew").offset().top},
+        'slow');
+});
+$("#tc").click(function() {
+    $('html,body').animate({
+        scrollTop: $("#crew").offset().top},
+        'slow');
+});
+</script>
+<script>
+$(function(){
+    var requiredCheckboxes = $('.Service :checkbox[required]');
+    requiredCheckboxes.change(function(){
+        if(requiredCheckboxes.is(':checked')) {
+            requiredCheckboxes.removeAttr('required');
+        } else {
+            requiredCheckboxes.attr('required', 'required');
+        }
+    });
+});
+$(function(){
+    var requiredCheckboxes = $('.TRUCKS :checkbox[required]');
+    requiredCheckboxes.change(function(){
+        if(requiredCheckboxes.is(':checked')) {
+            requiredCheckboxes.removeAttr('required');
+        } else {
+            requiredCheckboxes.attr('required', 'required');
+        }
+    });
+});
+$(function(){
+    var requiredCheckboxes = $('.people :checkbox[required]');
+    requiredCheckboxes.change(function(){
+        if(requiredCheckboxes.is(':checked')) {
+            requiredCheckboxes.removeAttr('required');
+        } else {
+            requiredCheckboxes.attr('required', 'required');
+            
+        }
+    });
+});
+
+</script>
+                                                                             <!-- The key is restricted -->
+
+
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeFmgcx1YEdBflIU-BNZdeYCU97hzM3xo&libraries=places&callback=activate">
+</script>
+
+
+</body>
+
+</html>
+{% endif %}
+{% endblock  %}

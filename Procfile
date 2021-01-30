@@ -1,0 +1,1 @@
+web: gunicorn MOVE_WEB.wsgi

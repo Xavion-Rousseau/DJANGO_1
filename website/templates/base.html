@@ -1,0 +1,126 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+      <link rel="icon" href="{% static 'website/images/favicon.png' %}">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Were a simple famliy owend moving company. Our main goal is to make your move simple as possible.">
+    <meta name="author" content="xavion">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
+    
+    <title>{% block title%}Lug Haul{% endblock%}</title>
+<!--
+SOFTY PINKO
+https://templatemo.com/tm-535-softy-pinko
+-->
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="{% static 'website/css/bootstrap.min.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'website/css/font-awesome.css' %}">
+
+    <link rel="stylesheet" href="{% static 'website/css/templatemo-softy-pinko.css' %}">
+    <link rel="stylesheet" href="{% static 'website/css/mycss.css' %}">
+    <link rel="stylesheet" href="{% static 'website/css/my_css.css' %}">
+    </head>
+    
+    <body>
+    
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+    
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="{% url 'home'%}" class="logo">
+                            <i><img src="{% static 'website/images/logo9.png' %}" alt=""></i>
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li><a href="" class=""></a></li>
+                            <li><a href="{% url 'home'%}">Home</a></li> 
+                            <!-- <li><a href="{% url 'Cities' %}">Cities</a></li> -->
+                            <!-- <li><a href="#testimonials"></a></li> -->
+                            <!-- <li><a href="#pricing-plans">Pricing</a></li> -->
+                            <li><a href="#Cities">Cities</a></li>
+                            <li><a href="#work-process">Services</a></li>
+                            <!-- <li><a href="#contact-us"><b></b></a></li> -->
+                            <li><a href="#features">about</a></li>
+                            <li><a href="#contact-us">contact-us</a></li>
+                            <li><a href="{% url 'Estiment'%}"><button type="button" class="EB"><b class="get-esti">Get-Estiment</b></button></a></li>
+                            
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    {% block contant %}
+
+    {% endblock %}
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <ul class="social">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- jQuery -->
+    <script src="{% static 'website/js/jquery-2.1.0.min.js' %}"></script>
+
+    <!-- Bootstrap -->
+    <script src="{% static 'website/js/popper.js' %}"></script>
+    <script src="{% static 'website/js/bootstrap.min.js' %}"></script>
+
+    <!-- Plugins -->
+    <script src="{% static 'website/js/scrollreveal.min.js' %}"></script>
+    <script src="{% static 'website/js/waypoints.min.js' %}"></script>
+    <script src="{% static 'website/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'website/js/imgfix.min.js' %}"></script> 
+    
+    <!-- Global Init -->
+    <script src="{% static 'website/js/custom.js' %}"></script>
+
+</body>
+
+
+</html>
+

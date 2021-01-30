@@ -1,0 +1,180 @@
+.card-img:hover{
+background-color: rgb(236, 208, 255);
+border-radius: 200px;
+}
+
+
+.imagebox{
+    margin: 3vh;
+    
+    
+}
+.box-image{
+    width: 100%;
+    margin: auto;
+    
+    
+}
+.ytr{
+    font-size: 0.4px;
+}
+.rap{
+    background-color: rgba(174, 0, 255, 0.055);
+    border-radius: 2vh;
+}
+.pgi{
+    text-align: center;
+}
+.rap:hover{
+    background-color: #fff7fa;
+}
+.imagebox:hover{
+    box-shadow: hotpink;
+}
+#donationcheckbox {
+    display:none;
+}
+#warehousecheckbox {
+    display:none;
+}
+#homecheckbox {
+    display:none;
+}
+#brokencheckbox {
+    display:none;
+}
+#storecheckbox {
+    display:none;
+}
+#craiglistcheckbox {
+    display:none;
+}
+#pickupcheck {
+    display:none;
+}
+#tcheck {
+    display:none;
+}
+#fc {
+    display:none;
+}
+#sc{
+    display:none;
+}
+#tc{
+    display: none;
+}
+
+#tsc{
+    display: none;
+}
+
+#one_people{
+    display: none;
+}
+
+#two_people{
+    display: none;
+}
+.center{
+    text-align: center;
+}
+/* :checked+label img {
+    transform: scale(0.9);
+    box-shadow: 0 0 5px rgb(255, 0, 140);
+    z-index: -1;
+  }
+  :checked+label::before {
+    content: "✓";
+    background-color: grey;
+    transform: scale(1);
+  }
+  :checked+label {
+    border-color: #ddd;
+  } */
+
+  label {
+    border: 1px solid #fff;
+    padding: 10px;
+    display: block;
+    position: relative;
+    margin: 10px;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  label::before {
+    background-color: white;
+    color: white;
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    border: 1px solid rgb(255, 0, 119);
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 28px;
+    transition-duration: 0.4s;
+    transform: scale(0);
+  }
+  
+  label img {
+    height: 100px;
+    width: 100px;
+    transition-duration: 0.2s;
+    transform-origin: 50% 50%;
+  }
+  
+  :checked+label {
+    border-color: #ddd;
+  }
+  
+  :checked+label::before {
+    content: "✓";
+    background-color: rgb(255, 255, 255);
+    transform: scale(1);
+  }
+  
+  :checked+label img {
+    transform: scale(0.9);
+    box-shadow: 0 0 5px rgb(255, 112, 207);
+    z-index: -1;
+  }
+  .next{
+    background:    #a671fa;
+    border:        1px solid #dfc2ff;
+    border-radius: 11px;
+    padding:       30px 55px;
+    color:         #ffffff;
+    display:       inline-block;
+    font:          normal bold 26px/1 "Open Sans", sans-serif;
+    text-align:    center;
+    
+      
+      width: 100%;
+  }
+  .next:hover{
+      color: 5px rgb(255, 112, 207);
+  }
+  .selectc{
+    color: #a671fa;
+    text-align: center;
+    margin: 11vh;
+}
+#hidden_div {
+    display: none;
+}
+.imgheight{
+    
+}
+.location{
+    margin: 44px;
+}
