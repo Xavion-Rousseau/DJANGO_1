@@ -1,10 +1,10 @@
 from django.shortcuts import render
 from django.core.mail import send_mail
-from .models import Email,Estiment
+from .models import Email,Estiments
 from .form import EmailForm, EstimentForm
 
 from .Distance import Map
-from .service import WhatService
+
 #from .Distance import Map
 
 # Create your views here.

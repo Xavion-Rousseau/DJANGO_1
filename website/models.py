@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
-class Estiment(models.Model):
+
+class Estiments(models.Model):
     Storage_Estiment = models.BooleanField(default=False)	
     Home_Move_Estiment = models.BooleanField(default=False)	
     Donation_Estiment = models.BooleanField(default=False)	

@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 import os
 from pathlib import Path
 import django_heroku
-import dj_database_url
+
 from decouple import config
 
 # from unipath import Path
@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'website',
+    
     
     
 ]
@@ -88,18 +89,18 @@ WSGI_APPLICATION = 'MOVE_WEB.wsgi.application'
 # My Database info
 
 
-
 '''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME':'Live_1',
-        'USER':'xavion',
+        'NAME':'',
+        'USER':'',
         'PASSWORD':'',
-        'HOST':'database-2.cts8pxp9e6te.us-east-2.rds.amazonaws.com',
-        'PORT':'5432', 
+        'PORT':'5432',
+        'HOST':'', 
     }
 }
+'''
 '''
 #for loacal host test
 DATABASES = {
@@ -108,9 +109,11 @@ DATABASES = {
         'NAME':os.path.join(BASE_DIR,'db.sqlite3'),
     }
 }
-
-db_from_env = dj_database_url.config(conn_max_age=600)
-DATABASES['default'].update(db_from_env)
+'''
+if os.getcwd() == '/app':
+    import dj_database_url
+    db_from_env = dj_database_url.config(conn_max_age=600)
+    DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -157,7 +160,7 @@ STATICFILES_DIRS = [
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
-
+'''
 #email settings
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
@@ -165,7 +168,7 @@ EMAIL_HOST_USER = 'lug.n.haul@gmail.com'
 EMAIL_HOST_PASSWORD=config('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = True
 #EMAIL_USE_SSL = False
-
+'''
 
 django_heroku.settings(locals())
 

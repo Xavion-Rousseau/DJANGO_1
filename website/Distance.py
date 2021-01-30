@@ -53,10 +53,12 @@ class Map:
                 return True
                 
         
-        if int(float(range_found)) > 1700:
+        if int(float(range_found)) > 1000:
             return True
-        s = range_found_pickup.replace('mi','')
-        n= range_found_drop.replace('mi','')
+        d = range_found_pickup.replace('mi','')
+        f= range_found_drop.replace('mi','')
+        s = d.replace(',','')
+        n= f.replace(',','')
         if int(float(s)) < 100 or int(float(n)) < 100:
             return True 
 
