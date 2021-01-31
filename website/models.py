@@ -14,7 +14,7 @@ class Estiments(models.Model):
     seventeen_truck= models.BooleanField(default=False)
     twenty_truck= models.BooleanField(default=False)
     twenty_six_truck= models.BooleanField(default=False)
-    one_peolpe= models.BooleanField(default=False)
+    one_people= models.BooleanField(default=False)
     two_people = models.BooleanField(default=False)	
     pickup_location = models.CharField(max_length=255)
     dropoff_location = models.CharField(max_length=255)

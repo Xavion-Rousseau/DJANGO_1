@@ -4,16 +4,10 @@ from .models import Email,Estiments
 class EstimentForm(forms.ModelForm):
     class Meta:
         model = Estiments
-        fields = ['Storage_Estiment', 'Home_Move_Estiment','Donation_Estiment','Junk_Estiment','Pickups_Estiment','Craiglist_Estiment','pickup','ten_truck','fifteen_truck','seventeen_truck','twenty_truck','twenty_six_truck','one_peolpe','two_people','pickup_location','dropoff_location','Name','phone_number','date','time','details','book_service','book_truck','book_crew']   
-        options={
-            'db_table': 'tblclients',
-            'managed': True,
-        }     
+        fields = ['Storage_Estiment', 'Home_Move_Estiment','Donation_Estiment','Junk_Estiment','Pickups_Estiment','Craiglist_Estiment','pickup','ten_truck','fifteen_truck','seventeen_truck','twenty_truck','twenty_six_truck','one_people','two_people','pickup_location','dropoff_location','Name','phone_number','date','time','details','book_service','book_truck','book_crew']   
+        
 class EmailForm(forms.ModelForm):
     class Meta:
         model = Email
         fields = ('name_Email','email_Email','message_Email')
-        options={
-            'db_table': 'tblclients',
-            'managed': True,
-        }
+        
