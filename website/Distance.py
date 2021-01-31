@@ -19,7 +19,7 @@ class Map:
         
 
         #API_KEY FOR GEO,PLACES,MATRIX, and 
-        self.API_KEY = config('API_KEY')
+        self.API_KEY = config("API_KEY")
 
         self.request = requests.get(URL + "origins=" + pickup + "&destinations=" + dropoff + "&key=" + self.API_KEY)
 
