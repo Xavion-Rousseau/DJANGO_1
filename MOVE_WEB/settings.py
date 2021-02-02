@@ -33,7 +33,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.lughaul.com']
+ALLOWED_HOSTS = ['lughaul.com','127.0.0.1']
 
 
 # Application definition
@@ -92,12 +92,12 @@ WSGI_APPLICATION = 'MOVE_WEB.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME':'lug',
-        'USER':'XavionRousseau',
+        'USER':'Xavion',
         'PASSWORD':config('DB_PASS'),
         'PORT':'5432',
-        'HOST':'lug.cts8pxp9e6te.us-east-2.rds.amazonaws.com', 
+        'HOST':'lughaul.cts8pxp9e6te.us-east-2.rds.amazonaws.com', 
     }
 }
 '''
