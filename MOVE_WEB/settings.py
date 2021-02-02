@@ -89,7 +89,7 @@ WSGI_APPLICATION = 'MOVE_WEB.wsgi.application'
 # My Database info
 
 
-
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -109,7 +109,7 @@ DATABASES = {
         'NAME':os.path.join(BASE_DIR,'db.sqlite3'),
     }
 }
-'''
+
 
 import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=600)
