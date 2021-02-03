@@ -97,7 +97,7 @@ def Estiment(request):
 
 
         # FORM FOR CREW
-        if 'one_peolpe' in request.POST:
+        if 'one_people' in request.POST:
             dic['crew'] = request.POST['one_people']
         elif 'two_people' in request.POST:
             dic['crew'] = request.POST['two_people']
