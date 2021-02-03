@@ -93,11 +93,11 @@ WSGI_APPLICATION = 'MOVE_WEB.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME':'lug',
-        'USER':'Xavion',
-        'PASSWORD':config('DB_PASS'),
+        'NAME':'LugAws',
+        'USER':'XavionRou',
+        'PASSWORD':config("DB_PASS"),
         'PORT':'5432',
-        'HOST':'lughaul.cts8pxp9e6te.us-east-2.rds.amazonaws.com', 
+        'HOST':'awsdb.cts8pxp9e6te.us-east-2.rds.amazonaws.com', 
     }
 }
 '''

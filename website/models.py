@@ -20,7 +20,7 @@ class Estiments_Truck(models.Model):
     seventeen_truck= models.BooleanField(default=False)
     twenty_truck= models.BooleanField(default=False)
     twenty_six_truck= models.BooleanField(default=False)
-class Estiments_People:
+class Estiments_People(models.Model):
     one_people= models.BooleanField(default=False)
     two_people = models.BooleanField(default=False)	
 
