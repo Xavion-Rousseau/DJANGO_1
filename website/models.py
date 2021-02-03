@@ -21,7 +21,7 @@ class Estiments_Truck(models.Model):
     twenty_truck= models.BooleanField(default=False)
     twenty_six_truck= models.BooleanField(default=False)
 class Estiments_People(models.Model):
-    one_people= models.BooleanField(default=False)
+    one_people = models.BooleanField(default=False)
     two_people = models.BooleanField(default=False)	
 
    
@@ -31,9 +31,9 @@ class Booked(models.Model):
     date=models.DateField(default=timezone.now)
     time=models.TimeField()
     details = models.CharField(max_length=255)
-    book_service= models.CharField(max_length=255)
-    book_truck=models.CharField(max_length=255)
-    book_crew=models.CharField(max_length=255)
+    book_service = models.CharField(max_length=255)
+    book_truck =models.CharField(max_length=255)
+    book_crew =models.CharField(max_length=255)
     book_pickup = models.CharField(max_length=255)
     book_drop = models.CharField(max_length=255)
 
