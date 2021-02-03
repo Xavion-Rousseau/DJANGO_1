@@ -89,9 +89,17 @@
         <span class="input-group-text" id="basic-addon2">truck</span>
         </div>
         <div class="col-lg-4 col-md-6 input-group mb-3">
-            <input value="{{crew}}" readonly   name="book_crew" type="text" class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <input value="{{crew}}" name="book_crew" type="text" class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2">
             <span class="input-group-text" id="basic-addon2">Crew</span>
             </div>
+            <div class="col-lg-6 col-md-6 input-group mb-3">
+                <input value="{{pickup_location}" name="book_pickup" type="text" class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <span class="input-group-text" id="basic-addon2">pickup</span>
+                </div>
+                <div class="col-lg-6 col-md-6 input-group mb-3">
+                    <input value="{{dropoff_location}}" readonly   name="book_drop" type="text" class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <span class="input-group-text" id="basic-addon2">dropoff</span>
+                    </div>
 <div class="col-lg-12 input-group">
 <span class="input-group-text">Extra details</span>
 <input required name="details" placeholder="optional" class="form-control" aria-label="With textarea"></textarea>
@@ -188,7 +196,7 @@ text-align:    center;"><p style="padding: 2vh;">BOOK</p></button>
 <div><div class=" row">
     <div class="col-lg-6">
     <div class="col-lg-12"><input required name="pickup_location" id="look" style="margin-bottom: 5vh; margin-top: 9vh;" class="form-control form-control-lg" type="text" placeholder="Pickup-Location" aria-label=".form-control-lg example"></div>
-    <div class="col-lg-12"><input name="dropoff_location" required id="looks" style=""  class=" form-control form-control-lg" type="text" placeholder="Dropoff-Location" aria-label=".form-control-lg example"></div>
+    <div class="col-lg-12"><input name="dropoff_location" required id="looks" class=" form-control form-control-lg" type="text" placeholder="Dropoff-Location" aria-label=".form-control-lg example"></div>
     
 </div>
     <div class="col-lg-6"><label for="pi"><h1></h1></label><img style="margin: 1vh;width: 90vh;" id="pic" src="{% static 'website/images/USAA.png'%}" alt=""></div>

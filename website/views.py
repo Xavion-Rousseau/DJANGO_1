@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.core.mail import send_mail
-from .models import Email,Estiments
-from .form import EmailForm, EstimentForm
+from .models import Booked,Email,Estiments_People,Estiments_Truck,Estiments_Services,Estiments_Locations
+
+from .form import Esti_service,Esti_LocForm,Esti_peopleForm,Esti_TruckFrom,EmailForm,BookedForm
 
 from .Distance import Map
 
@@ -122,68 +123,3 @@ def Estiment(request):
     return render(request,'Estiment.html')
 
 
-
-
-def Booking(request):
-
-
-        
-        
-    return render(request,'Booking.html')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-
-def Trucks(request):
-    return render(request,'Trucks.html')
-def Custoz(request):
-    
-    return render(request,'Custoz.html',{})
-
-def Cities(request):
-    return render(request,'Cities.html')
-
-
-
-def Services(request):
-    return render(request,'Services.html')
-
-
-def house(request):
-    return render(request,'house.html')
-def Delivery(request):
-    if request == 'POST':
-        service = request.POST['Delivery']
-    # return render(request,'Delivery.html',{'Delivery':service})
-    return render(request,'Delivery.html')
-def donation(request):
-    return render(request,'donation.html')
-def Storage(request):
-    return render(request,'Storage.html')
-def junk(request):
-    return render(request,'junk.html')
-def craiglist(request):
-    return render(request,'craiglist.html')
